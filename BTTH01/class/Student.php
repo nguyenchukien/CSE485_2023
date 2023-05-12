@@ -3,7 +3,7 @@ class Student
 {
     private String $id;
     private String $name;
-    private int $age;
+    private String $age;
     public function getID(){
         return $this->id;
     }

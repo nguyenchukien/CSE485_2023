@@ -1,4 +1,4 @@
-id,name,age,grade
+id,name,age
 1,John Smith,12,6
 2,Jane Doe,13,7
 3,Michael Johnson,11,5

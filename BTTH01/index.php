@@ -6,13 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quản lý sinh viên</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+<?php
+require './class/Student.php';
+
+    $file = fopen("./src/student.txt", "r");
+    // lưu nội dung file vào data
+    while (!feof($file)) {
+        $line = fgets($file);
+        $data = explode(",", $line);
+        $student = new Student();
+        $student->setID($data[0]);
+        $student->setName($data[1]);
+        $student->setAge($data[2]);
+    }
+    
+    
+
+?>
 <body>
     <header>
     <h1>Quản lý sinh viên</h1>     
     </header>
-    
+    <div id="show">
+        <table class="table table-striped">
+            <?php 
+                
+                
+                
+                ?>
+          </table>
+    </div>
 
 
 
